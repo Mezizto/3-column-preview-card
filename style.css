@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+:root {
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+
+    --transparent-white-paragraphs: hsla(0, 0%, 100%, 0.75);
+    --very-light-gray-background-headings-buttons: hsl(0, 0%, 95%);
+}
+
+body {
+    background-color: var(--very-light-gray-background-headings-buttons);
+    font-size: 15px;
+    margin: 50px 0 50px 0;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    
+}
+
+.container {
+    display: grid;
+    width: 200px;
+    border-radius: 5px;
+    font-family: Big shoulders Display;
+    color: var(--very-light-gray-background-headings-buttons);
+    overflow: hidden;
+}
+
+.container >
+.sedan,
+.suv,
+.luxury {
+    padding: 30px;
+}
+
+.container > 
+.sedan h1,
+.suv h1,
+.luxury h1 {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.8em;
+}
+
+.container > 
+.sedan p,
+.suv p,
+.luxury p {
+    font-size: 0.6em;
+    font-family: Lexend Deca;
+    line-height: 15px;
+    color: var(--transparent-white-paragraphs);
+}
+
+.container >
+.sedan button,
+.suv button,
+.luxury button {
+    background-color: var(--very-light-gray-background-headings-buttons);
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-weight: 700;
+    font-size: 0.6em;
+    margin-top: 10px;
+}
+
+.container >
+.sedan img,
+.suv img,
+.luxury img {
+    max-width: 40px;
+}
+
+.sedan {
+    background-color: var(--bright-orange);
+}
+
+.sedan button {
+    color: var(--bright-orange);
+    border: 2px solid var(--bright-orange);
+}
+
+.suv {
+    background-color: var(--dark-cyan);
+}
+
+.suv button {
+    color: var(--dark-cyan);
+    border: 2px solid var(--dark-cyan);
+}
+
+.luxury {
+    background-color: var(--very-dark-cyan);
+}
+
+.luxury button {
+    color: var(--very-dark-cyan);
+    border: 2px solid var(--very-dark-cyan);
+}
+
+.sedan button:hover {
+    cursor: pointer;
+    background-color: var(--bright-orange);
+    color: var(--very-light-gray-background-headings-buttons);
+    border: 2px solid var(--very-light-gray-background-headings-buttons)
+}
+
+.suv button:hover {
+    cursor: pointer;
+    background-color: var(--dark-cyan);
+    color: var(--very-light-gray-background-headings-buttons);
+    border: 2px solid var(--very-light-gray-background-headings-buttons)
+}
+
+.luxury button:hover {
+    cursor: pointer;
+    background-color: var(--very-dark-cyan);
+    color: var(--very-light-gray-background-headings-buttons);
+    border: 2px solid var(--very-light-gray-background-headings-buttons)
+}
+
+@media screen and (min-width: 600px) {
+    body {
+        margin: 0;
+    }
+
+    .container {
+        width: 560px;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .container >
+    .sedan button,
+    .suv button,
+    .luxury button {
+        margin-top: 50px;
+    }
+
+    .container > 
+    .sedan p,
+    .suv p,
+    .luxury p {
+        font-size: 0.6em;
+    }
+} 
